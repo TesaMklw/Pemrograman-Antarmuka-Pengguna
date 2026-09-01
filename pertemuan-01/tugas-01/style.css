@@ -1,0 +1,60 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, sans-serif;   /* [1] font diganti */
+  background-color: #f7f7f7;                     /* [2] tambahan warna background body */
+  color: #222222;
+}
+
+header {
+  padding: 30px;
+  text-align: center;
+  background: linear-gradient(to right, #2b5876, #4e4376); /* [3] gradasi warna, bukan solid */
+  color: #ffffff;
+}
+
+nav {
+  display: flex;               /* [4] layout nav pakai flexbox, bukan block biasa */
+  justify-content: center;
+  gap: 25px;
+  padding: 15px;
+  background: #1e1e1e;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #4e9af1;               /* [5] efek hover ganti warna teks, bukan underline */
+}
+
+article {
+  padding: 30px;
+  max-width: 700px;
+  margin: 30px auto;
+  background: #ffffff;
+  border-radius: 12px;          /* [6] tambahan border-radius pada kartu artikel */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+article h2 {
+  color: #2b5876;
+}
+
+article ul {
+  padding-left: 20px;
+}
+
+article a {
+  color: #2b5876;
+  font-weight: bold;
+}
+
+footer {
+  padding: 20px;
+  text-align: center;
+  background: #1e1e1e;
+  color: #ffffff;               /* [7] footer gelap dengan teks putih, kebalikan dari contoh dosen */
+}
