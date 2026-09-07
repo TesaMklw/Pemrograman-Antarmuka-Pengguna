@@ -1,12 +1,14 @@
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-}
-
+/* ----- header -----
+    padding: 30px, text-align: center, background: #eeeeee */
 header {
     padding: 30px;
     text-align: center;
     background: #eeeeee;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
 }
 
 nav {
@@ -39,11 +41,18 @@ footer {
 
 .container {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 2fr 1fr; /* 2 kolom: article lebih lebar (2fr), aside lebih sempit (1fr) */
     gap: 20px;
     max-width: 1100px;
     margin: auto;
     padding: 20px;
+}
+
+/* Responsif: di layar kecil (HP), 2 kolom berubah jadi 1 kolom bertumpuk */
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
 }
 
 img, video {

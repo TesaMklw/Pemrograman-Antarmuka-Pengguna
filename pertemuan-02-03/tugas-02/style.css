@@ -1,0 +1,116 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, sans-serif;   /* [1] font diganti */
+    background-color: #f7f7f7;                     /* [2] tambahan warna background body */
+    color: #222222;
+}
+
+header {
+    padding: 30px;
+    text-align: center;
+    background: linear-gradient(to right, #e4a9d2, #91c6a4); /* [3] gradasi warna, bukan solid */
+    color: #ffffff;
+}
+
+nav {
+    display: flex;               /* [4] layout nav pakai flexbox, bukan block biasa */
+    justify-content: center;
+    gap: 25px;
+    padding: 15px;
+    background: #1e1e1e;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* CHALLENGE #4: efek hover ditambahkan pada menu nav
+    Sebelumnya <a> di nav tidak punya efek apa-apa saat disentuh mouse.
+    Sekarang, saat kursor diarahkan ke link, teks akan bergaris bawah (underline). */
+nav a:hover {
+    text-decoration: underline;
+    color: #e4a9d2;               /* [5] efek hover ganti warna teks, bukan underline */
+}
+
+/* ===== layout utama (grid 2 kolom) ===== */
+.container {
+    display: grid;
+
+    /* CHALLENGE #1: rasio kolom diubah dari 2fr 1fr menjadi 3fr 1fr.
+    Efeknya: kolom kiri (.main-content, berisi article + galeri) menjadi
+    lebih LEBAR dari sebelumnya, sedangkan kolom kanan (aside/sidebar)
+    menjadi relatif lebih SEMPIT dibanding total lebar halaman.
+    Contoh pada lebar 1100px: dulu kiri ~733px & kanan ~367px (2fr:1fr),
+    sekarang kiri ~825px & kanan ~275px (3fr:1fr). */
+    grid-template-columns: 3fr 1fr;
+    gap: 20px;
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Responsif: di layar kecil (HP), grid berubah jadi 1 kolom bertumpuk */
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+}
+
+img, video {
+    max-width: 100%;
+}
+
+article, aside {
+    padding: 20px;
+}
+
+article h2 {
+    margin-top: 0;
+}
+
+/* ===== section galeri (baru) ===== */
+section#galeri {
+    padding: 20px;
+}
+
+/* CHALLENGE #2 & #3: grid untuk menampilkan minimal 3 gambar galeri
+    secara rapi berdampingan, otomatis menyesuaikan jumlah kolom
+    sesuai lebar layar (auto-fit). */
+.galeri-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+}
+
+.galeri-grid img {
+    border-radius: 6px;
+    height: 150px;
+    object-fit: cover;
+}
+
+/* ===== aside / sidebar ===== */
+aside {
+    background: #f4f6f8;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px; /* kasih jarak antar aside */
+}
+
+#destinasi {
+    margin-bottom: 30px; /* jarak ekstra sebelum contact */
+}
+
+#contact {
+    margin-top: 10px;
+}
+
+/* ===== footer ===== */
+
+footer {
+    padding: 20px;
+    text-align: center;
+    background: #1e1e1e;
+    color: #ffffff;               /* [7] footer gelap dengan teks putih, kebalikan dari contoh dosen */
+}
