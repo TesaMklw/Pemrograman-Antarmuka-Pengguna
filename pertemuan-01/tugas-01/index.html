@@ -4,44 +4,53 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Profil Mahasiswa</title>
+
+  <!-- SYARAT: gunakan external CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <header>
+  <!-- SYARAT: Komponen wajib #1 - HEADER (struktur dari kode dosen) -->
+  <header id="top">
     <h1>Profil Mahasiswa</h1>
-    <p>Sistem Informasi Akademik</p>
+    <p>Tugas 1 Pemrograman Antarmuka Pengguna</p>
   </header>
 
+  <!-- SYARAT: Komponen wajib #2 - NAVIGATION (struktur dari kode dosen, tetap pakai <a> langsung) -->
   <nav>
-    <a href="#">Home</a>
-    <a href="#">Profil</a>
-    <a href="#">Kontak</a>
+    <a href="#top">Home</a>
+    <a href="#tentang">Profile</a>
+    <a href="#kontak">Contact</a>
   </nav>
 
-  <article>
-    <h2>Tesalonika Miracle Makalew</h2>
-    <p><strong>Program Studi:</strong> Sistem Informasi</p>
-    <p>
-      Mahasiswa semester 3 yang tertarik pada pengembangan web dan
-      desain antarmuka pengguna. Senang belajar hal baru di bidang
-      teknologi dan suka berkolaborasi dalam tim.
-    </p>
+  <!-- SYARAT: Komponen wajib #3 - ARTICLE -->
+  <article id="tentang">
 
+    <!-- SYARAT: Article berisi NAMA dan PROGRAM STUDI -->
+    <h2>Biodata</h2>
+    <p><strong>Nama:</strong> Tesalonika Miracle Makalew</p>
+    <p><strong>NIM:</strong> 825250020</p>
+    <p><strong>Program Studi:</strong> Sistem Informasi</p>
+
+    <!-- SYARAT: Article berisi DESKRIPSI SINGKAT -->
+    <p><strong>Deskripsi Singkat:</strong> Saya adalah mahasiswa semester 3 yang tertarik pada pengembangan web dan pemrograman berorientasi objek. Saya senang belajar hal baru dan mengerjakan proyek IT.</p>
+
+    <!-- SYARAT: Article berisi TIGA KEAHLIAN/MINAT -->
     <h3>Keahlian & Minat</h3>
     <ul>
-      <li>Pemrograman Web (HTML, CSS, JavaScript)</li>
-      <li>Desain UI/UX</li>
-      <li>Gaming</li>
+      <li>Pengembangan Web (HTML, CSS, JavaScript)</li>
+      <li>Pemrograman Berbasis Objek (Java)</li>
+      <li>Mempelajari Jaringan Komputer dan Komputasi Awan</li>
     </ul>
 
-    <p>
-      <a href="https://github.com/" target="_blank">Kunjungi portofolio saya</a>
-    </p>
+    <!-- SYARAT: Article berisi SATU LINK -->
+    <p id="kontak"><strong>Link:</strong> <a href="https://github.com/TesaMklw" target="_blank">github.com/TesaMklw</a></p>
+
   </article>
 
+  <!-- SYARAT: Komponen wajib #4 - FOOTER -->
   <footer>
-    <p>&copy; 2026 Ahmad Fauzi</p>
+    <p>&copy; 2026 Tesalonika Miracle Makalew</p>
   </footer>
 
 </body>
