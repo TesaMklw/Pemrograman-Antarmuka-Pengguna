@@ -1,9 +1,9 @@
 body {
   margin: 0;
-  font-family: 'Segoe UI', Tahoma, sans-serif;   /* [1] font diganti */
-  background-color: #f7f7f7;                     /* [2] tambahan warna background body */
+  font-family: 'Segoe UI', Tahoma, sans-serif;     /* [1] font diganti */
+  background-color: #ffffff;                     /* [2] tambahan warna background body */
   color: #222222;
-}
+} 
 
 header {
   padding: 30px;
@@ -13,11 +13,11 @@ header {
 }
 
 nav {
-  display: flex;               /* [4] layout nav pakai flexbox, bukan block biasa */
+  display: flex;                /* [4] layout nav pakai flexbox, bukan block biasa */
   justify-content: center;
   gap: 25px;
   padding: 15px;
-  background: #1e1e1e;
+  background: #224c31;
 }
 
 nav a {
@@ -34,13 +34,13 @@ article {
   padding: 30px;
   max-width: 700px;
   margin: 30px auto;
-  background: #ffffff;
-  border-radius: 12px;          /* [6] tambahan border-radius pada kartu artikel */
+  background: #e4a9d2;
+  border-radius: 12px;            /* [6] tambahan border-radius pada kartu artikel */
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
-article h2 {
-  color: #e4a9d2;
+article h2, article h3 {
+  color: #ffffff;
 }
 
 article ul {
@@ -48,13 +48,17 @@ article ul {
 }
 
 article a {
-  color: #e4a9d2;
+  color: #3d8a58;
   font-weight: bold;
+}
+
+article p, article li {
+  color: #224c31;
 }
 
 footer {
   padding: 20px;
   text-align: center;
-  background: #1e1e1e;
+  background: #224c31;
   color: #ffffff;               /* [7] footer gelap dengan teks putih, kebalikan dari contoh dosen */
 }
